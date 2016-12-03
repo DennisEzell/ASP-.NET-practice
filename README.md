@@ -8,16 +8,15 @@ Repo holding a simple ASP .NET MVC app to experiment with various C# functions
   <li>Clone this repo into a local directory that VS will be creating the new .NET project within
     <ul>
       <li>I created a new directory to hold my new git repo on my local </li>
-      <li>I created the new directory at C:\Users\Deeze814\Source\Repos\Dashboard </li>
+      <li>I created the new directory at C:\Users\Deeze814\Source\Repos </li>
     </ul>
   </li>
   <li>I then Shift+Right Click to open a git bash terminal in this directory and issued the commands
     <ul>
-      <li>git init </li>
       <li>git clone https://github.com/DennisEzell/DotNET_practice.git
         <ul>
           <li>This will create a new folder in the Dashboard directory named after the repo being cloned</li>
-          <li>Results in a path of C:\Users\Deeze814\Source\Repos\Dashboard\DotNET_practice\</li>
+          <li>Results in a path of C:\Users\Deeze814\Source\Repos\DotNET_practice\</li>
         </ul>
       </li>      
     </ul>
@@ -30,12 +29,12 @@ Repo holding a simple ASP .NET MVC app to experiment with various C# functions
       <li>Popup Bottom Menu: Following values-->
           <ul>
             <li>Name:           Dashboard</li>
-            <li>Location:       C:\Users\Deeze814\Source\Repos\Dashboard\DotNET_practice\</li>
+            <li>Location:       C:\Users\Deeze814\Source\Repos\DotNET_practice\</li>
             <li>Solution:       Create new Solution</li>
             <li>Solution Name:  Dashboard</li>
           </ul>
       </li>
-      <li></li>
+      <li>On the next screen I selected the MVC option</li>
     </ul>
   </li>
 </ol>
