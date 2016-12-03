@@ -37,6 +37,13 @@ Repo holding a simple ASP .NET MVC app to experiment with various C# functions
       <li>On the next screen I selected the MVC option</li>
     </ul>
   </li>
+  <li>Open Git bash and path down into the cloned repo location (C:\Users\Deeze814\Source\Repos\DotNET_practice)</li>
+  <li>Run the following Git commands
+    <ul>
+      <li>$ git pull</li>
+      <li>$ git push</li>
+    </ul>
+  </li>
 </ol>
   
     
