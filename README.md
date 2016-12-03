@@ -41,6 +41,8 @@ Repo holding a simple ASP .NET MVC app to experiment with various C# functions
   <li>Run the following Git commands
     <ul>
       <li>$ git pull</li>
+      <li>$ git add *</li>
+      <li>$ git commit -m "Initial commit of C# project"</li>
       <li>$ git push</li>
     </ul>
   </li>
