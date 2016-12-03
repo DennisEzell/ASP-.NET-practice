@@ -14,7 +14,28 @@ Repo holding a simple ASP .NET MVC app to experiment with various C# functions
   <li>I then Shift+Right Click to open a git bash terminal in this directory and issued the commands
     <ul>
       <li>git init </li>
-      <li>git clone https://github.com/DennisEzell/DotNET_practice.git</li>
+      <li>git clone https://github.com/DennisEzell/DotNET_practice.git
+        <ul>
+          <li>This will create a new folder in the Dashboard directory named after the repo being cloned</li>
+          <li>Results in a path of C:\Users\Deeze814\Source\Repos\Dashboard\DotNET_practice\</li>
+        </ul>
+      </li>      
+    </ul>
+  </li>
+  <li>Then I opened Visual Studios and performed the following steps:
+    <ul>
+      <li>Click File --> New --> Project</li>
+      <li>Popup Left Menu:   Templates --> Visual C#</li>
+      <li>Popup Right Menu:  ASP.NET Web Application</li>
+      <li>Popup Bottom Menu: Following values-->
+          <ul>
+            <li>Name:           Dashboard</li>
+            <li>Location:       C:\Users\Deeze814\Source\Repos\Dashboard\DotNET_practice\</li>
+            <li>Solution:       Create new Solution</li>
+            <li>Solution Name:  Dashboard</li>
+          </ul>
+      </li>
+      <li></li>
     </ul>
   </li>
 </ol>
