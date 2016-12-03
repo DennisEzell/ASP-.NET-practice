@@ -48,5 +48,11 @@ Repo holding a simple ASP .NET MVC app to experiment with various C# functions
   </li>
 </ol>
   
+### Step 2: Issue request to public GitHub public event API
+<ol>
+  <li></li>
+  <li></li>
+  <li></li>
+</ol>
     
         
