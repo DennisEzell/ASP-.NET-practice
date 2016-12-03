@@ -14,7 +14,7 @@ Repo holding a simple ASP .NET MVC app to experiment with various C# functions
   <li>I then Shift+Right Click to open a git bash terminal in this directory and issued the commands
     <ul>
       <li>git init </li>
-      <li>git clone</li>
+      <li>git clone https://github.com/DennisEzell/DotNET_practice.git</li>
     </ul>
   </li>
 </ol>
