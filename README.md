@@ -67,7 +67,7 @@ Repo holding a simple ASP .NET MVC app to experiment with various C# functions
       <li>This means multiple classes of the same type (user for example) will be generated if they differ by a single name/value pair</li>
     </ul>
   </li>
-  <li>Wheat we will probably do is just create POCOs that represent what we need from the JSON response
+  <li>What we will probably do is just create POCOs that represent what we need from the JSON response
     <ul>
       <li>We will name our properties what we like and map them to the associated JSON property using: [JsonProperty("xx")]</li>
       <li>
@@ -80,6 +80,18 @@ Repo holding a simple ASP .NET MVC app to experiment with various C# functions
       </li>
     </ul>
   </li>
+  <li><b>**Update**</b> Using the program located at http://jsonclassgenerator.codeplex.com/downloads/get/631627, we can create our classes individually
+    <ul>
+      <li>The Git Hub events all have the same format with only the Payload differing.</li>
+      <li>The Payload will differ based on the EventType</li>
+      <li><b>Strategy For genrating our classes:</b> 
+          <ul>
+            <li>Use the application above to generate a base class on a sample JSON response (empty payload)</li>
+            <li>Make subclasses that create a custom implementaion of the payload based on each distinct event type</li>
+          </ul>
+      </li>
+    </ul>
+  </li>  
 </ol>
 
 ### Step 4: Parse the Git Hub response
