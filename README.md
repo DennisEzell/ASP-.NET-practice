@@ -61,8 +61,25 @@ Repo holding a simple ASP .NET MVC app to experiment with various C# functions
 ### Step 3: Create the domain classes based on GitHub JSON 
 <ol>
   <li>Go get the JSON response sample at https://api.github.com/events</li>
-  <li>Using the <b>Web Essential</b> plugin within VS, go to Edit --> Paste As Special --> Paste JSON as Classes</li>
-  <li></li>
+  <li>Using the <b>Web Essential</b> plugin within VS, go to Edit --> Paste As Special --> Paste JSON as Classes
+    <ul>
+      <li>This may not be needed since this will generate classes for all of the sample JSON</li>
+      <li>This means multiple classes of the same type (user for example) will be generated if they differ by a single name/value pair</li>
+    </ul>
+  </li>
+  <li>Wheat we will probably do is just create POCOs that represent what we need from the JSON response
+    <ul>
+      <li>We will name our properties what we like and map them to the associated JSON property using: [JsonProperty("xx")]</li>
+      <li>
+      [JsonProperty("id")]<br>
+        public string ID <br>
+        {<br>
+            get { return id; }<br>
+            set { id = value; }<br>
+        }<br>
+      </li>
+    </ul>
+  </li>
 </ol>
 
 ### Step 4: Parse the Git Hub response
