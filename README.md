@@ -83,5 +83,15 @@ Repo holding a simple ASP .NET MVC app to experiment with various C# functions
 </ol>
 
 ### Step 4: Parse the Git Hub response
-    
+<ol>
+  <li>Parse the JSON response by using the NewtonSoft.JSON assembly</li>
+  <li>We use the Newtonsoft.Json.JsonConvert.Deserialize&lt&gt() method
+      <ul>
+        <li>This method takes a string representation of the JSON response</li>
+        <li>You specify the object to map to by providing it in the parameter brackets</li>
+        <li>EX: var gitEvents = JsonConvert.DeserializeObject&ltIEnumerable&ltGitEvent&gt&gt(read.ReadToEnd())</li>
+        <li></li>
+      </ul>
+  </li>
+</ol>
         
