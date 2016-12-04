@@ -1,4 +1,5 @@
-﻿@{
+﻿@model IEnumerable<Dashboard.Models.GitEvent>
+@{
     ViewBag.Title = "Home Page";
 }
 
@@ -9,6 +10,14 @@
 </div>
 
 <div class="row">
+    @foreach (var gitEvent in Model)
+    {
+        <div class="col-md-4" style="border: 1px solid black">
+            <div>@Html.DisplayFor(modelItem => gitEvent.ID)</div>
+            <div>@Html.DisplayFor(modelItem => gitEvent.Type)</div>
+            <div>@Html.DisplayFor(modelItem => gitEvent.Created)</div>
+        </div>
+    }
     @*<div class="col-md-4">
         <h2>Getting started</h2>
         <p>

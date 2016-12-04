@@ -1,8 +1,11 @@
-﻿using System;
+﻿using Dashboard.Models;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Runtime.Serialization.Json;
 using System.Web;
 using System.Web.Mvc;
 
@@ -15,17 +18,10 @@ namespace Dashboard.Controllers
             string apiUrl = "https://api.github.com/events";
             var webRequest = (HttpWebRequest)WebRequest.Create(apiUrl);
             webRequest.UserAgent = "application/vnd.github.v3+json";
-            Stream webResponse = webRequest.GetResponse().GetResponseStream();
+            StreamReader read = new StreamReader(webRequest.GetResponse().GetResponseStream());
+            var gitEvents = JsonConvert.DeserializeObject<IEnumerable<GitEvent>>(read.ReadToEnd());
 
-            using (StreamReader read = new StreamReader(webResponse))
-            {
-                while (read.Peek() >= 0)
-                {
-                    System.Diagnostics.Debug.WriteLine(read.ReadLine());
-                }
-            }
-
-            return View();
+            return View(gitEvents);
         }
 
         public ActionResult About()
