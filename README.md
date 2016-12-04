@@ -56,7 +56,15 @@ Repo holding a simple ASP .NET MVC app to experiment with various C# functions
   <li>Setting the UserAgent, this is to set it equal to the value sent back by the github API
     <ul><li>webRequest.UserAgent = "application/vnd.github.v3+json"</li></ul>
   </li>
+</ol>
+
+### Step 3: Create the domain classes based on GitHub JSON 
+<ol>
+  <li>Go get the JSON response sample at https://api.github.com/events</li>
+  <li>Using the <b>Web Essential</b> plugin within VS, go to Edit --> Paste As Special --> Paste JSON as Classes</li>
   <li></li>
 </ol>
+
+### Step 4: Parse the Git Hub response
     
         
