@@ -109,4 +109,18 @@ Repo holding a simple ASP .NET MVC app to experiment with various C# functions
       </ul>
   </li>
 </ol>
-        
+
+
+###Appendix
+<ol>Creating .gitIgonre
+  <li>Open the local directory where you cloned your repo</li>
+  <li>Shift + Right click and select "Open Git Bash here"</li>
+  <li>Enter $git touch .gitignore</li>
+  <li>Edit the new .gitignore to inlcude the following</li>
+    <ul>
+      <li>*/Dashboard/Generated/*/li>
+      <li>*/Dashboard/Properties/*</li>
+      <li>*/Dashboard/obj/*</li>
+    </ul>
+    <li>This will ignore any files generated when creating a Publish profile</li>
+</ol>
