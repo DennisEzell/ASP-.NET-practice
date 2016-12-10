@@ -53,18 +53,60 @@ Repo holding a simple ASP .NET MVC app to experiment with various C# functions
   <li>I had to cast the WebRequest to a HttpWebRequest in order to set the UserAgent:
     <ul><li>var webRequest = (HttpWebRequest)WebRequest.Create(apiUrl)</li></ul>
   </li>
-  <li>Setting the UserAgent, this is to set it equal to the value sent back by the github API
-    <ul><li>webRequest.UserAgent = "application/vnd.github.v3+json"</li></ul>
+  <li>Setting the UserAgent and Aceept headers, this is to set it equal to the value sent back by the github API
+    <ul>
+      <li>webRequest.UserAgent = "DennisEzell"</li>
+      <li>webRequest.Accept = "application/vnd.github.v3+json";</li>
+    </ul>
   </li>
 </ol>
 
 ### Step 3: Create the domain classes based on GitHub JSON 
 <ol>
   <li>Go get the JSON response sample at https://api.github.com/events</li>
-  <li>Using the <b>Web Essential</b> plugin within VS, go to Edit --> Paste As Special --> Paste JSON as Classes</li>
-  <li></li>
+  <li>Using the <b>Web Essential</b> plugin within VS, go to Edit --> Paste As Special --> Paste JSON as Classes
+    <ul>
+      <li>This may not be needed since this will generate classes for all of the sample JSON</li>
+      <li>This means multiple classes of the same type (user for example) will be generated if they differ by a single name/value pair</li>
+    </ul>
+  </li>
+  <li>What we will probably do is just create POCOs that represent what we need from the JSON response
+    <ul>
+      <li>We will name our properties what we like and map them to the associated JSON property using: [JsonProperty("xx")]</li>
+      <li>
+      [JsonProperty("id")]<br>
+        public string ID <br>
+        {<br>
+            get { return id; }<br>
+            set { id = value; }<br>
+        }<br>
+      </li>
+    </ul>
+  </li>
+  <li><b>**Update**</b> Using the program located at http://jsonclassgenerator.codeplex.com/downloads/get/631627, we can create our classes individually
+    <ul>
+      <li>The Git Hub events all have the same format with only the Payload differing.</li>
+      <li>The Payload will differ based on the EventType</li>
+      <li><b>Strategy For genrating our classes:</b> 
+          <ul>
+            <li>Use the application above to generate a base class on a sample JSON response (empty payload)</li>
+            <li>Make subclasses that create a custom implementaion of the payload based on each distinct event type</li>
+          </ul>
+      </li>
+    </ul>
+  </li>  
 </ol>
 
 ### Step 4: Parse the Git Hub response
-    
+<ol>
+  <li>Parse the JSON response by using the NewtonSoft.JSON assembly</li>
+  <li>We use the Newtonsoft.Json.JsonConvert.Deserialize&lt&gt() method
+      <ul>
+        <li>This method takes a string representation of the JSON response</li>
+        <li>You specify the object to map to by providing it in the parameter brackets</li>
+        <li>EX: var gitEvents = JsonConvert.DeserializeObject&ltIEnumerable&ltGitEvent&gt&gt(read.ReadToEnd())</li>
+        <li></li>
+      </ul>
+  </li>
+</ol>
         
