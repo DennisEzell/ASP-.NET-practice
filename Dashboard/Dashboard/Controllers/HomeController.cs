@@ -17,7 +17,9 @@ namespace Dashboard.Controllers
         {
             string apiUrl = "https://api.github.com/events";
             var webRequest = (HttpWebRequest)WebRequest.Create(apiUrl);
-            webRequest.UserAgent = "application/vnd.github.v3+json";
+            //Have to include a valide UserAgent https://developer.github.com/v3/#user-agent-required
+            webRequest.UserAgent = "DennisEzell";
+            webRequest.Accept = "application/vnd.github.v3+json";
             StreamReader read = new StreamReader(webRequest.GetResponse().GetResponseStream());
             var gitEvents = JsonConvert.DeserializeObject<IEnumerable<GitEvent>>(read.ReadToEnd());
 
