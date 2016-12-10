@@ -53,8 +53,11 @@ Repo holding a simple ASP .NET MVC app to experiment with various C# functions
   <li>I had to cast the WebRequest to a HttpWebRequest in order to set the UserAgent:
     <ul><li>var webRequest = (HttpWebRequest)WebRequest.Create(apiUrl)</li></ul>
   </li>
-  <li>Setting the UserAgent, this is to set it equal to the value sent back by the github API
-    <ul><li>webRequest.UserAgent = "application/vnd.github.v3+json"</li></ul>
+  <li>Setting the UserAgent and Aceept headers, this is to set it equal to the value sent back by the github API
+    <ul>
+      <li>webRequest.UserAgent = "DennisEzell"</li>
+      <li>webRequest.Accept = "application/vnd.github.v3+json";</li>
+    </ul>
   </li>
 </ol>
 
