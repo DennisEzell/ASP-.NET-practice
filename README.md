@@ -111,8 +111,9 @@ Repo holding a simple ASP .NET MVC app to experiment with various C# functions
 </ol>
 
 
-###Appendix
-<ol>Creating .gitIgonre
+## Appendix
+### Creating .gitIgonre
+<ol>
   <li>Open the local directory where you cloned your repo</li>
   <li>Shift + Right click and select "Open Git Bash here"</li>
   <li>Enter $git touch .gitignore</li>
