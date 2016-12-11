@@ -154,6 +154,7 @@ Repo holding a simple ASP .NET MVC app to experiment with various C# functions
 	<li>On the instance page, click Create or reset Windows password.</li>
 	<li>In the Set new Windows password dialog, add your username, and click Set to create the user account on your instance.</li>
 	<li>Make a note of the provided password, and close the dialog.</li>
+	<li>I had to change the <b>External IP</b> value from Ephermal to Static in order to provide an IP value for for the deployment step below</li>
 </ol>
 ### Deploy the application to your Windows instance
 <ol>
