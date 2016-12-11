@@ -119,7 +119,7 @@ Repo holding a simple ASP .NET MVC app to experiment with various C# functions
   <li>Enter $git touch .gitignore</li>
   <li>Edit the new .gitignore to inlcude the following</li>
     <ul>
-      <li>*/Dashboard/Generated/*/li>
+      <li>*/Dashboard/Generated/*</li>
       <li>*/Dashboard/Properties/*</li>
       <li>*/Dashboard/obj/*</li>
     </ul>
