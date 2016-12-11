@@ -111,8 +111,8 @@ Repo holding a simple ASP .NET MVC app to experiment with various C# functions
 </ol>
 
 
-## Appendix
-### Creating .gitIgonre
+# Appendix
+## Creating .gitIgonre
 <ol>
   <li>Open the local directory where you cloned your repo</li>
   <li>Shift + Right click and select "Open Git Bash here"</li>
@@ -126,7 +126,7 @@ Repo holding a simple ASP .NET MVC app to experiment with various C# functions
     <li>This will ignore any files generated when creating a Publish profile</li>
 </ol>
 
-### Deploying to Azure
+## Deploying to Azure
 <ol>
   <li>Inside VS right click the project (under the sln name, "Dashboard" for this project)</li>
   <li>Click "Publish"</li>
@@ -146,4 +146,32 @@ Repo holding a simple ASP .NET MVC app to experiment with various C# functions
     </ul>
  </ol>
 
-
+## Deploying to Google Cloud
+### Create and configure a new Compute Engine instance
+<ol>
+	<li>Create a Google Cloud account at https://cloud.google.com/</li>
+		<ul>
+			<li>I did this implicitly since I was in google chrome logged in to my Google account</li>
+		</ul>
+	<li>First, use the Google Cloud Launcher to create a new <b>Compute Engine</b> instance that has Windows Server 2012 R2, Microsoft IIS, ASP.NET, and SQL Express preinstalled</li>
+	<li>In the Cloud Platform Console, go to the Cloud Launcher ASP.NET Framework page.</li>
+		<ul>
+			<li><b>Note:</b> If this is your first time using Compute Engine, the Compute Engine API will initialize before you arrive at the page. The initialization process can take up to a minute to complete.</li>
+		</ul>
+	<li>Set your deployment name and preferred Compute Engine zone.</li>
+	<li>Click Deploy ASP.NET Framework to deploy the instance.</li>
+		<ul>
+			<li><b>Note:</b> Windows instances can take up to eight minutes to deploy.</li>
+		</ul>
+	<li></li>
+	<li></li>
+</ol>
+### Add default windows user
+<ol>
+	<li>After the deployment process finishes, add a default Windows user to your new instance</li>
+	<li>In the Cloud Platform Console, go to the VM instances page.</li>
+	<li>Click the name of your newly deployed instance. If you used the default deployment settings, the instance name will have the prefix aspnet.</li>
+	<li>On the instance page, click Create or reset Windows password.</li>
+	<li>In the Set new Windows password dialog, add your username, and click Set to create the user account on your instance.</li>
+	<li>Make a note of the provided password, and close the dialog.</li>
+</ol>
