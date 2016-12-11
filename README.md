@@ -144,11 +144,9 @@ Repo holding a simple ASP .NET MVC app to experiment with various C# functions
 		<ul>
 			<li><b>Note:</b> Windows instances can take up to eight minutes to deploy.</li>
 		</ul>
-	<li></li>
-	<li></li>
 </ol>
 
-###Add default windows user
+### Add default windows user
 <ol>
 	<li>After the deployment process finishes, add a default Windows user to your new instance</li>
 	<li>In the Cloud Platform Console, go to the VM instances page.</li>
@@ -157,6 +155,24 @@ Repo holding a simple ASP .NET MVC app to experiment with various C# functions
 	<li>In the Set new Windows password dialog, add your username, and click Set to create the user account on your instance.</li>
 	<li>Make a note of the provided password, and close the dialog.</li>
 </ol>
+### Deploy the application to your Windows instance
+<ol>
+	<li>In Visual Studio, in the Solution Explorer pane, right click your application.</li>
+	<li>In the context menu, click Publish....</li>
+	<li>In the Publish Web dialog, select Custom as your publish target.</li>
+	<li>In the New Custom Profile dialog, provide a name for the deployment profile, and click OK.</li>
+	<li>Fill out your profile as follows:
+		<ul>
+		<li><b>Server: </b>The external IP address of your Compute Engine instance. This address can be found on the VM instances page in the Cloud Platform Console. The IP address is ephemeral, which is sufficient for our purposes.</li>
+		<li><b>Site name: </b> Default Web Site</li>
+			<ul>
+			<li><b>Note:</b> The site name you provide here must match the name that appears in IIS Manager on your Compute Engine instance.</li>
+			</ul>
+		<li></li>
+		</ul>
+	</li>
+</ol>
+
 
 ## Deploying to Azure
 <ol>
