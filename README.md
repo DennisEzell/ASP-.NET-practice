@@ -147,3 +147,21 @@ Repo holding a simple ASP .NET MVC app to experiment with various C# functions
  </ol>
 
 ## Deploying to Google Cloud
+<ol>
+	<li>Create a Google Cloud account at https://cloud.google.com/</li>
+		<ul>
+			<li>I did this implicitly since I was in google chrome logged in to my Google account</li>
+		</ul>
+	<li>First, use the Google Cloud Launcher to create a new <b>Compute Engine</b> instance that has Windows Server 2012 R2, Microsoft IIS, ASP.NET, and SQL Express preinstalled</li>
+	<li>In the Cloud Platform Console, go to the Cloud Launcher ASP.NET Framework page.</li>
+		<ul>
+			<li><b>Note:</b> If this is your first time using Compute Engine, the Compute Engine API will initialize before you arrive at the page. The initialization process can take up to a minute to complete.</li>
+		</ul>
+	<li>Set your deployment name and preferred Compute Engine zone.</li>
+	<li>Click Deploy ASP.NET Framework to deploy the instance.</li>
+		<ul>
+			<li><b>Note:</b> Windows instances can take up to eight minutes to deploy.</li>
+		</ul>
+	<li></li>
+	<li></li>
+</ol>
