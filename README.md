@@ -146,9 +146,9 @@ Repo holding a simple ASP .NET MVC app to experiment with various C# functions
     </ul>
  </ol>
 
-## Deploying to Google Cloud
+## Deploying to Google Cloud 
 <ol>
-  <li></li>
+  <li>Test</li>
   <li></li>
   <li></li>
   <li></li>
