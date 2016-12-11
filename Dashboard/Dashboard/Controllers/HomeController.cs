@@ -24,6 +24,24 @@ namespace Dashboard.Controllers
             var gitEvents = JsonConvert.DeserializeObject<IEnumerable<GitEvent>>(read.ReadToEnd());
 
             return View(gitEvents);
+
+            //WebRequest req = WebRequest.CreateHttp(apiUrl);
+            //var req = WebRequest.CreateHttp(apiUrl);
+            //req.UserAgent = "DennisEzell";
+            //req.Accept = "application/vnd.github.v3+json";
+
+            //var resp = req.GetResponse();
+
+            //WebClient client = new WebClient();
+            ////client.BaseAddress = apiUrl;
+            ////client.Headers["User Agent"] = "DennisEzell";
+            //client.Headers.Add(HttpRequestHeader.UserAgent, "DennisEzell");
+            //client.Headers.Add(HttpRequestHeader.Accept, "application/vnd.github.v3+json");
+
+            //string resp = client.DownloadString(apiUrl);
+
+
+            //return View();
         }
 
         public ActionResult About()
