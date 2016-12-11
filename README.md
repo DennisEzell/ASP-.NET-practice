@@ -111,8 +111,9 @@ Repo holding a simple ASP .NET MVC app to experiment with various C# functions
 </ol>
 
 
-###Appendix
-<ol>Creating .gitIgonre
+## Appendix
+### Creating .gitIgonre
+<ol>
   <li>Open the local directory where you cloned your repo</li>
   <li>Shift + Right click and select "Open Git Bash here"</li>
   <li>Enter $git touch .gitignore</li>
@@ -124,3 +125,25 @@ Repo holding a simple ASP .NET MVC app to experiment with various C# functions
     </ul>
     <li>This will ignore any files generated when creating a Publish profile</li>
 </ol>
+
+### Deploying to Azure
+<ol>
+  <li>Inside VS right click the project (under the sln name, "Dashboard" for this project)</li>
+  <li>Click "Publish"</li>
+  <li>Select "Microsoft Azure Web Apps"</li>
+  <li>It will show the account you are logged into VS as and any subscription</li>
+    <ul><li>I did not have a subscription</li></ul>
+  <li>Go to https://portal.azure.com/ </li>
+  <li>Enter you microsoft account info you logged into VS with</li>
+  <li>You will be redirected to the Azure Dashboard</li>
+  <li>Setup free Azure subscription</li>
+    <ul>
+      <li>On the left hand navigation menu, scroll to the very bottom option of <b>More services &gt </b></li>
+      <li>On the resulting new menu, click <b>Subscriptions</b></li>
+      <li>On the new menu, clic the top left option of <b>+ Add</b></li>
+      <li>You will be redirect to the subscription screen, select <b>Free Trail</b></li>
+      <li>Complete the verification steps</li>
+    </ul>
+ </ol>
+
+
