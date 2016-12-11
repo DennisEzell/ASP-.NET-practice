@@ -136,7 +136,7 @@ Repo holding a simple ASP .NET MVC app to experiment with various C# functions
   <li>Go to https://portal.azure.com/ </li>
   <li>Enter you microsoft account info you logged into VS with</li>
   <li>You will be redirected to the Azure Dashboard</li>
-  <li>Setup free Azure subscription</li>
+  <li>Setup free Azure subscription
     <ul>
       <li>On the left hand navigation menu, scroll to the very bottom option of <b>More services</b></li>
       <li>On the resulting new menu, click <b>Subscriptions</b></li>
@@ -144,6 +144,7 @@ Repo holding a simple ASP .NET MVC app to experiment with various C# functions
       <li>You will be redirect to the subscription screen, select <b>Free Trail</b></li>
       <li>Complete the verification steps</li>
     </ul>
+   </li>
  </ol>
 
 ## Deploying to Google Cloud </br>
