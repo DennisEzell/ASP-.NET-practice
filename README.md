@@ -174,6 +174,12 @@ Repo holding a simple ASP .NET MVC app to experiment with various C# functions
 		<ul><li><b>Note:</b> The destination URL is the URL where your page will be accessible after it is deployed.</li></ul>
 		</ul>
 	</li>
+	<li>Click Validate Connection to ensure that the properties are correct.</li>
+	<li>Because the Microsoft IIS installation in your deployment uses a self-signed certificate by default, you'll see a Certificate Error during the validation process. Check the box to Save this certificate for future sessions of Visual Studio, and click Accept to accept the certificate.
+		<ul><li><b>Note:</b> In a testing scenario like the one outlined in this tutorial, a self-signed certificate is sufficient. However, this is not sufficient for deploying a real, production-ready application. Before deploying a production-ready application, register a domain name for your IP address, and then get an SSL certificate for that domain name, and install the certificate in Microsoft IIS running on the Compute Engine instance.</li></ul>
+	</li>
+	<li>If your configuration is valid, click Settings. Click File Publish Options, and check Remove additional files at destination. This is important for later steps when you publish new web sites to the same Compute Engine instance.</li>
+	<li>Click Publish to deploy the sample web application. After publishing completes, Visual Studio opens the application in your default web browser:</li>
 </ol>
 
 
