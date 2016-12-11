@@ -111,22 +111,80 @@ Repo holding a simple ASP .NET MVC app to experiment with various C# functions
 </ol>
 
 
-## Appendix
-### Creating .gitIgonre
+# Appendix
+## Creating .gitIgonre
 <ol>
   <li>Open the local directory where you cloned your repo</li>
   <li>Shift + Right click and select "Open Git Bash here"</li>
   <li>Enter $git touch .gitignore</li>
   <li>Edit the new .gitignore to inlcude the following</li>
     <ul>
-      <li>*/Dashboard/Generated/*/li>
+      <li>*/Dashboard/Generated/*</li>
       <li>*/Dashboard/Properties/*</li>
       <li>*/Dashboard/obj/*</li>
     </ul>
     <li>This will ignore any files generated when creating a Publish profile</li>
 </ol>
 
-### Deploying to Azure
+
+## Deploying to Google Cloud </br>
+### Create and configure a new Compute Engine instance
+<ol>
+	<li>Create a Google Cloud account at https://cloud.google.com/</li>
+		<ul>
+			<li>I did this implicitly since I was in google chrome logged in to my Google account</li>
+		</ul>
+	<li>First, use the Google Cloud Launcher to create a new <b>Compute Engine</b> instance that has Windows Server 2012 R2, Microsoft IIS, ASP.NET, and SQL Express preinstalled</li>
+	<li>In the Cloud Platform Console, go to the Cloud Launcher ASP.NET Framework page.</li>
+		<ul>
+			<li><b>Note:</b> If this is your first time using Compute Engine, the Compute Engine API will initialize before you arrive at the page. The initialization process can take up to a minute to complete.</li>
+		</ul>
+	<li>Set your deployment name and preferred Compute Engine zone.</li>
+	<li>Click Deploy ASP.NET Framework to deploy the instance.</li>
+		<ul>
+			<li><b>Note:</b> Windows instances can take up to eight minutes to deploy.</li>
+		</ul>
+</ol>
+
+### Add default windows user
+<ol>
+	<li>After the deployment process finishes, add a default Windows user to your new instance</li>
+	<li>In the Cloud Platform Console, go to the VM instances page.</li>
+	<li>Click the name of your newly deployed instance. If you used the default deployment settings, the instance name will have the prefix aspnet.</li>
+	<li>On the instance page, click Create or reset Windows password.</li>
+	<li>In the Set new Windows password dialog, add your username, and click Set to create the user account on your instance.</li>
+	<li>Make a note of the provided password, and close the dialog.</li>
+	<li>I had to change the <b>External IP</b> value from Ephermal to Static in order to provide an IP value for for the deployment step below</li>
+</ol>
+### Deploy the application to your Windows instance
+<ol>
+	<li>In Visual Studio, in the Solution Explorer pane, right click your application.</li>
+	<li>In the context menu, click Publish....</li>
+	<li>In the Publish Web dialog, select Custom as your publish target.</li>
+	<li>In the New Custom Profile dialog, provide a name for the deployment profile, and click OK.</li>
+	<li>Fill out your profile as follows:
+		<ul>
+		<li><b>Server: </b>The external IP address of your Compute Engine instance. This address can be found on the VM instances page in the Cloud Platform Console. The IP address is ephemeral, which is sufficient for our purposes.</li>
+		<li><b>Site name: </b> Default Web Site</li>
+			<ul>
+			<li><b>Note:</b> The site name you provide here must match the name that appears in IIS Manager on your Compute Engine instance.</li>
+			</ul>
+		<li><b>User name: </b>The username of the Windows user account you created on your Compute Engine instance</li>
+		<li><b>Password:</b> The password of the Windows user account you created on your Compute Engine instance.</li>
+		<li><b>Destination URL:</b> http://external_ip_of_your_compute_instance</li>
+		<ul><li><b>Note:</b> The destination URL is the URL where your page will be accessible after it is deployed.</li></ul>
+		</ul>
+	</li>
+	<li>Click Validate Connection to ensure that the properties are correct.</li>
+	<li>Because the Microsoft IIS installation in your deployment uses a self-signed certificate by default, you'll see a Certificate Error during the validation process. Check the box to Save this certificate for future sessions of Visual Studio, and click Accept to accept the certificate.
+		<ul><li><b>Note:</b> In a testing scenario like the one outlined in this tutorial, a self-signed certificate is sufficient. However, this is not sufficient for deploying a real, production-ready application. Before deploying a production-ready application, register a domain name for your IP address, and then get an SSL certificate for that domain name, and install the certificate in Microsoft IIS running on the Compute Engine instance.</li></ul>
+	</li>
+	<li>If your configuration is valid, click Settings. Click File Publish Options, and check Remove additional files at destination. This is important for later steps when you publish new web sites to the same Compute Engine instance.</li>
+	<li>Click Publish to deploy the sample web application. After publishing completes, Visual Studio opens the application in your default web browser:</li>
+</ol>
+
+
+## Deploying to Azure
 <ol>
   <li>Inside VS right click the project (under the sln name, "Dashboard" for this project)</li>
   <li>Click "Publish"</li>
@@ -136,14 +194,15 @@ Repo holding a simple ASP .NET MVC app to experiment with various C# functions
   <li>Go to https://portal.azure.com/ </li>
   <li>Enter you microsoft account info you logged into VS with</li>
   <li>You will be redirected to the Azure Dashboard</li>
-  <li>Setup free Azure subscription</li>
+  <li>Setup free Azure subscription
     <ul>
-      <li>On the left hand navigation menu, scroll to the very bottom option of <b>More services &gt </b></li>
+      <li>On the left hand navigation menu, scroll to the very bottom option of <b>More services</b></li>
       <li>On the resulting new menu, click <b>Subscriptions</b></li>
-      <li>On the new menu, clic the top left option of <b>+ Add</b></li>
+      <li>On the new menu, click the top left option of <b>+ Add</b></li>
       <li>You will be redirect to the subscription screen, select <b>Free Trail</b></li>
       <li>Complete the verification steps</li>
     </ul>
+   </li>
  </ol>
 
 
