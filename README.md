@@ -146,6 +146,13 @@ Repo holding a simple ASP .NET MVC app to experiment with various C# functions
     </ul>
  </ol>
 
-### Deploying to Google Cloud </br>
-
+## Deploying to Google Cloud </br>
+<ol>
+  <li>Create a Google Cloud account at https://cloud.google.com/</li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ol>
 
