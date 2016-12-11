@@ -168,7 +168,10 @@ Repo holding a simple ASP .NET MVC app to experiment with various C# functions
 			<ul>
 			<li><b>Note:</b> The site name you provide here must match the name that appears in IIS Manager on your Compute Engine instance.</li>
 			</ul>
-		<li></li>
+		<li><b>User name: </b>The username of the Windows user account you created on your Compute Engine instance</li>
+		<li><b>Password:</b> The password of the Windows user account you created on your Compute Engine instance.</li>
+		<li><b>Destination URL:</b> http://external_ip_of_your_compute_instance</li>
+		<ul><li><b>Note:</b> The destination URL is the URL where your page will be accessible after it is deployed.</li></ul>
 		</ul>
 	</li>
 </ol>
