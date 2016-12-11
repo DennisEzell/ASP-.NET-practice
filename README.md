@@ -126,6 +126,16 @@ Repo holding a simple ASP .NET MVC app to experiment with various C# functions
     <li>This will ignore any files generated when creating a Publish profile</li>
 </ol>
 
+## Deploying to Google Cloud </br>
+<ol>
+  <li>Create a Google Cloud account at https://cloud.google.com/</li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ol>
+
 ## Deploying to Azure
 <ol>
   <li>Inside VS right click the project (under the sln name, "Dashboard" for this project)</li>
@@ -146,13 +156,5 @@ Repo holding a simple ASP .NET MVC app to experiment with various C# functions
     </ul>
  </ol>
 
-## Deploying to Google Cloud </br>
-<ol>
-  <li>Create a Google Cloud account at https://cloud.google.com/</li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-</ol>
+
 
